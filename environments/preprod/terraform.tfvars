@@ -3,7 +3,14 @@ par_resource_group = {
     name     = "rg-preprod"
     location = "East US"
   }
+
+   preprod2 = {
+    name     = "rg-ajadi"
+    location = "East US"
+  }
 }
+
+
 
 par_storage_account = {
   preprod = {

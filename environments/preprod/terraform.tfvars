@@ -8,6 +8,10 @@ par_resource_group = {
     name     = "rg-ajadi"
     location = "East US"
   }
+
+  preprod3 = {
+    name = "rg-gulami"
+  }
 }
 
 

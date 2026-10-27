@@ -11,6 +11,7 @@ par_resource_group = {
 
   preprod3 = {
     name = "rg-gulami"
+    location = "East US"
   }
 }
 

@@ -4,13 +4,13 @@ par_resource_group = {
     location = "East US"
   }
 
-   preprod2 = {
+  preprod2 = {
     name     = "rg-ajadi"
     location = "East US"
   }
 
   preprod3 = {
-    name = "rg-gulami"
+    name     = "rg-gulami"
     location = "East US"
   }
 }

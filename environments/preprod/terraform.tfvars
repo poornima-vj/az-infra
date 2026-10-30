@@ -13,6 +13,12 @@ par_resource_group = {
     name     = "rg-gulami"
     location = "East US"
   }
+
+  preprod4 = {
+    name     = "rg-ajadi2"
+    location = "East US"
+  }
+
 }
 
 

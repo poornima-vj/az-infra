@@ -1,0 +1,36 @@
+name: Terraform CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  terraform-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get my code
+        uses: actions/checkout@v4
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Check Terraform formatting
+        run: terraform fmt -check -recursive
+
+      - name: Check Preprod
+        working-directory: environments/preprod
+        run: |
+          terraform init -backend=false
+          terraform validate
+
+      - name: Check Prod
+        working-directory: environments/prod
+        run: |
+          terraform init -backend=false
+          terraform validate
